@@ -1,0 +1,17 @@
+{
+	"name": "Gagaguchi chatwork",
+	"version": "1.0",
+	"description": "We like less pop-ups, less tabs.",
+	"background": {
+		"page": "bg.html"
+	},
+	"manifest_version": 2,
+	"content_scripts" : [
+		{
+			"matches": ["https://www.chatwork.com/"],
+			"js": ["content.js"],
+      "run_at": "document_idle"
+		}
+	],
+	"permissions": ["tabs", "webRequest", "webRequestBlocking"]
+}
